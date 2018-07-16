@@ -33,7 +33,7 @@ config.devServer = {
         colors: true
     },
     historyApiFallback: true,
-    port: 9000,
+    port: 3081,
     open: true,
     openPage: 'views/pra/pLearn.html'
 };
