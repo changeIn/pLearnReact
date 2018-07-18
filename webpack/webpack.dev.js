@@ -2,7 +2,7 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 
 const config = require('./webpack.config');
 
-config.output.publicPath = 'http://localhost:9000/';
+config.output.publicPath = 'http://localhost:3081/';
 config.devtool = '#eval'; // 调试版要开启sourcemap
 config.plugins.shift(); // 调试版不需要清空dist文件夹
 
@@ -35,7 +35,7 @@ config.devServer = {
     historyApiFallback: true,
     port: 3081,
     open: true,
-    openPage: 'views/pra/pLearn.html'
+    openPage: 'views/pra/game.html'
 };
 
 module.exports = config;
