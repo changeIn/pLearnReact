@@ -1,0 +1,122 @@
+
+.grace-pagination{
+    display: table;
+    width: 100%;
+    height: 30px;
+    padding: 20px 0;
+    font-size: 13px;
+    color: #777777;
+    .page-size-options{
+        display: table-cell;
+        height: 30px;
+        line-height: 30px;
+        &.page-size-options-hide{
+            display: none;
+        }
+        .options-select{
+            margin-left: 10px;
+            /*很关键：将默认的select选择框样式清除*/
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            min-width: 45px;
+            height: 20px;
+            border: 1px solid #ecf1f7;
+            /*在选择框的最右侧中间显示小箭头图片*/
+            background: url("../../img/widget/select-arrow.png") no-repeat scroll right center transparent;
+            background-color: #ffffff;
+            padding-left: 5px;
+            font-size: 12px;
+            color: #777777;
+        }
+    }
+    .pagination-body{
+        display: table-cell;
+        text-align: right;
+        height: 30px;
+        line-height: 30px;
+        .body-page-step{
+            span{
+                cursor: pointer;
+                border-radius: 2px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                min-width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                list-style: none;
+                display: inline-block;
+                vertical-align: middle;
+                border: 1px solid #d9d9d9;
+                //background-color: #fdfdfd;
+                margin-right: 5px;
+                outline: 0;
+                &.first-page-btn,&.last-page-btn{
+                    padding: 0 20px;
+                    background-color: #fdfdfd;
+                    &.btn-disabled{
+                        background-color: #edeff0;
+                        color: #bec1c3;
+                    }
+                }
+                &.pre-page-btn{
+                    margin-right: 8px;
+                    background: url("../../img/widget/page-pre.png") no-repeat scroll center center #fdfdfd;
+                    &.btn-disabled{
+                        background-image: url("../../img/widget/page-pre-disabled.png");
+                    }
+                }
+                &.next-page-btn{
+                    margin-left: 3px;
+                    background: url("../../img/widget/page-next.png") no-repeat scroll center center #fdfdfd;
+                    &.btn-disabled{
+                        background-image: url("../../img/widget/page-next-disabled.png");
+                    }
+                }
+                &.btn-disabled{
+                    border: 1px solid #e1e5e7;
+                    cursor: not-allowed;
+                }
+            }
+            .total-num-font{
+                border: none;
+                margin-left: 35px;
+                color: #666666;
+            }
+            .number-page-btns{
+                display: inline-block;
+                list-style: none;
+                .number-page-btn-item{
+                    cursor: pointer;
+                    color: #666666;
+                    font-size: 12px;
+                    border-radius: 2px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    min-width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    list-style: none;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border: 1px solid #d9d9d9;
+                    background-color: #fdfdfd;
+                    margin-right: 5px;
+                    outline: 0;
+                    &.item-select{
+                        box-sizing: border-box;
+                        border: none;
+                        color: #2576df;
+                        background-color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

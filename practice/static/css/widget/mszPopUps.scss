@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "../mixin";
+$confirm-btn-fontSize: 16px;
+$info-container-fontSize: 16px;
+$tips-fontSize: 12px;
+$pop-title-fontSize: 18px;
+
+.hide{
+  display: none;
+}
+.msz-popup-back{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  outline: 0;
+  background: rgba(0,0,0,.25);
+}
+.msz-popup-back .popup-container{
+  position: absolute;
+  top: calc((100% - 3.533333rem)/2);
+  left: 50%;
+  height: auto;
+  min-height: 3.533333rem;
+  width: 8rem;
+  margin: -1.766667rem auto auto -4rem;
+  background-color: #ffffff;
+}
+
+.msz-popup-back .popup-container .info-container{
+  height: auto;
+  word-wrap:break-word;
+  box-sizing: border-box;
+  min-height: 2.4rem;
+  padding: 0.533333rem 0.666667rem;
+  color: #333333;
+  @include font-dpr($info-container-fontSize);
+}
+.msz-popup-back .popup-container .btn-container{
+  height: 1.2rem;
+  border-top: 1px solid #eeeeee;
+}
+.msz-popup-back .popup-container .btn-container div{
+  color: #298fef;
+  @include font-dpr($confirm-btn-fontSize);
+  text-align: center;
+  line-height: 1.2rem;
+  display: inline-block;
+  box-sizing: border-box;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+.msz-popup-back .popup-container .btn-container div:first-child{
+  border: none;
+}
+.msz-popup-back .popup-container .btn-container div:last-child{
+  border-right: none;
+}
+.msz-popup-back .popup-container .btn-container .cancel-btn{
+  color: #000000;
+}

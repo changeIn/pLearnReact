@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "../mixin";
+/**dpr-1 font-size**/
+$fontSize-title: 14px;
+.msz-switch {    
+    display: flex;
+    justify-content: center;
+    @include font-dpr($fontSize-title);
+	span{
+		padding:.24rem .42rem;
+		text-align:center;
+    	background:#eee;
+	    cursor: pointer;
+	    &.current{
+			background:#298fef;
+			color:#fff;
+		}
+		&:after{
+			z-index:1;
+			content:'';
+			position:absolute;
+			border-left:1px solid #ccc;
+			right: 0;
+		    height: 50%;
+		    top: 25%;
+		}
+		&.current:after,&:last-child:after{
+			border:none;
+		}
+	}
+}

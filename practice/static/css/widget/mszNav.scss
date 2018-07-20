@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import "../mixin";
+
+$nav-fontSize: 18px;
+
+.msz-nav{
+     width: 100%;
+     background: #fff;
+     text-align: center;
+     height: 1.12rem;
+     line-height: 1.12rem;
+     border-bottom: 1px solid #ceced2;
+   h2{
+    font-size: $nav-fontSize;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     word-wrap: break-word;
+     white-space: nowrap;
+     padding: 0 1rem;
+     a{
+        color: #333333;
+     }
+   }
+
+
+  .nav-left{
+    position: absolute;
+    left: 0.4rem;
+    top: 0.32rem;
+
+    .nav-back{
+       background-image: url(../../img/nav-back.png);
+       background-repeat: no-repeat;
+       background-size: 0.266667rem 0.48rem;
+       display:inline-block;
+       width: 0.50rem;
+       height: 0.50rem;
+       vertical-align: top;
+    }
+  }
+
+  .nav-right{
+    position: absolute;
+    top: 0.32rem;
+    right: 0.4rem;
+  }
+  .nav-right>a{
+     background-repeat: no-repeat;
+     background-size: 0.48rem;
+     display:inline-block;
+     width: 0.50rem;
+     height: 0.50rem;
+     vertical-align: top;
+  }
+
+  .nav-right>.refresh-btn{
+     background-image: url(../../img/update-icon.png);
+  }
+
+  .nav-right>.question-btn{
+     background-image: url(../../img/question.png);
+  }
+
+}
+[data-dpr="2"] .msz-nav h2{
+  font-size: $nav-fontSize*2;
+}
+[data-dpr="3"] .msz-nav h2{
+  font-size: $nav-fontSize*3;
+}

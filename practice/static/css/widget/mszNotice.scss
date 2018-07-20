@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import "../mixin";
+
+/**dpr-1 font-size**/
+
+$fontSize-title: 14px;
+.msz-notice {
+	position: relative;
+	overflow: hidden;
+	height: .8rem;
+	line-height: .8rem;
+	background: #fff8d2 url('../../img/notice.png') 0.4rem center no-repeat;
+	background-size: 0.426667rem 0.386667rem;
+	padding: 0 1.133333rem;
+	ul {
+		position: absolute;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+	li {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		width: 8rem;
+		;
+	}
+	.close-notice {
+		position: absolute;
+		right: 0.266667rem;
+		top: calc(50% - 0.146667rem);
+		display: block;
+		width: 0.306667rem;
+		height: 0.306667rem;
+		background: url('../../img/close.png') center center no-repeat;
+	}
+	.noticeItem {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}

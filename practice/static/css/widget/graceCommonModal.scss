@@ -1,0 +1,271 @@
+.grace-common-modal {
+}
+
+.grace-common-modal.open {
+    display: block;
+}
+
+.grace-common-modal.close {
+    display: none;
+}
+
+.grace-common-modal .r-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #373737;
+    background-color: rgba(241,241,241,0.8);
+    height: 100%;
+    z-index: 1001;
+    filter: alpha(opacity=50);
+}
+
+.grace-common-modal .vertical-center-modal {
+    text-align: center;
+}
+
+.grace-common-modal .vertical-center-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+
+.grace-common-modal .r-modal-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    outline: 0;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    top: 100px;
+    padding: 0 0 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.grace-common-modal .vertical-center-modal .r-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+    -moz-box-shadow:5px 5px 15px #bfbfbf; 
+    -webkit-box-shadow:5px 5px 15px #bfbfbf; 
+    box-shadow:5px 5px 15px #bfbfbf;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-title {
+    padding: 18px 0 0 42px;
+    font-size: 16px;
+    position: relative;
+    color: #666;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-title p {
+    font-size: 14px;
+    color: #333;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-content .r-modal-content-standard {
+    padding-top: 40px;
+    min-height: 110px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-content h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url('../../img/close-sd.png') no-repeat;
+    background-position: 9px 9px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-close.revise {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    right: -17px;
+    top: -17px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-icon {
+    background: url('../../img/icon-tips.png') center top no-repeat;
+    height: 48px;
+    display: block;
+}
+
+/* 不确定，问号提示 */
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-icon.r-modal-icon-sure {
+    background-position: center -60px;
+}
+
+/* 错误，不可以做的操作 */
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-icon.r-modal-icon-error {
+    background-position: center -120px;
+}
+
+/* 动作执行成功 */
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-icon.r-modal-icon-success {
+    background-position: center 0px;
+}
+
+/* 警告提示 */
+
+.grace-common-modal .r-modal-wrap .r-modal .r-modal-icon.r-modal-icon-warn {
+    background-position: center -180px;
+}
+
+.grace-common-modal .r-modal .r-modal-action {
+    text-align: center;
+}
+
+.grace-common-modal .r-modal .r-modal-action .r-modal-btn-save,
+.grace-common-modal .r-modal .r-modal-action .r-modal-btn-cancel {
+    color: #f44336;
+    border: 1px solid #e4393c;
+    padding: 0 26px;
+    height: 36px;
+    border-radius: 2px;
+    font: 14px/36px "Microsoft YaHei";
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.grace-common-modal .r-modal .r-modal-action .r-modal-btn-cancel {
+    color: #000;
+    border: 1px solid #999;
+    margin-left: 15px;
+}
+
+/*动画*/
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.2 ease-in;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0;
+    transition: opacity 0.2 ease-in;
+}
+.r-modal-enter {
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+.r-modal-enter.r-modal-enter-active {
+    -webkit-animation-name: graceModalIn;
+    animation-name: graceModalIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.r-modal-leave {
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.r-modal-leave.r-modal-leave-active {
+    animation-name: graceModalOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+@-webkit-keyframes graceModalIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes graceModalIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes graceModalOut {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+}
+
+@keyframes graceModalOut {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+}
+/*动画结束*/

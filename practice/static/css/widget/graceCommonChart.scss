@@ -1,0 +1,59 @@
+.graceCommonChart {
+    padding: 15px;
+    .highcharts-legend-item-hidden path:nth-of-type(2){
+        stroke: rgb(255, 255, 255);
+        stroke-width: 2;
+    }
+    .graceCommonChart-toolTipWrapper {
+        min-width: 170px;
+        height: auto;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px;
+        box-shadow:0 0 10px rgba(18, 42, 78,0.25);
+    }
+
+    .graceCommonChart-tooptipItem {
+        color: #ffffff;
+        font-family: MicrosoftYaHei;
+        line-height: 22px;
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        font-size: 12px;
+        .graceCommonChart-indexContainer {
+            align-self: center;
+            font-size: 12px;
+            .graceCommonChart-indexIcon {
+                display: inline-block;
+                width: .6em;
+                height: .6em;
+                border-radius: 50%;
+            }
+            .graceCommonChart-indexName {
+                margin-left: 5px;
+            }
+        }
+        .graceCommonChart-indexVal {
+            align-self: center;
+        }
+    }
+
+    .grace-highchart-container{
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+        .highcharts-xaxis .highcharts-axis-line {
+            stroke: #e8e8e8;
+            stroke-dasharray: 5, 10;
+        }
+        .highcharts-legend-item{
+            span{
+                margin-top:-1px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.grace-common-select{
+    position: relative;
+}
+.grace-common-select.disable{
+    pointer-events: none;
+}
+.grace-common-select ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #d2e0f4;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+.grace-common-select.open ul{
+    display: block;
+}
+.grace-common-select ul li {
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    clear: both;
+    font-weight: 400;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.grace-common-select ul li:hover{
+    color:#0075e7;
+}
+.grace-common-select ul li.select{
+    color:#0075e7;;
+}
+.grace-common-select ul li.disabled{
+    cursor:not-allowed;
+    color:#ddd;
+}
+.grace-common-select ul li.disabled:hover{
+    color:#ddd;
+}
+.grace-common-select .grace-btn{
+    min-width: 60px;
+    height: 30px;
+    text-align: left;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 1px;
+    outline: 0;
+    padding: 6px 6px 6px 12px;
+    cursor: pointer;
+}
+
+.grace-common-select .grace-btn{
+    position: relative;
+    min-width: 90px;
+    height: 30px;
+    text-align: left;
+    font-size: 13px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e8e8e8;
+    border-radius: 1px;
+    outline: 0;
+    padding: 6px 6px 6px 12px;
+    cursor: pointer;
+}
+.grace-common-select .grace-btn .down-icon{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    top: 10px;
+    right: 12px;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+.grace-common-select.open .grace-btn .down-icon{
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(313deg);
+    transform: rotate(313deg);
+    top: 13px;
+}
+.grace-common-select.disable .grace-btn .down-icon{
+    display: none;
+}

@@ -1,0 +1,353 @@
+.grace-sift-switch, .gss {
+	z-index:100;
+	position: relative;
+}
+
+/* 重写graceCataDropdown组件样式 start */
+    .dim-item .grace-btn-group.cata-dropdown .dropdown-toggle {
+        width: 332px;
+    }
+    .dim-item .grace-btn-group.cata-dropdown .dropdown-toggle .select-res-name {
+        width: 290px;
+    }
+    .dim-item .grace-dropdown-open .grace-btn-group.cata-dropdown .grace-cata-dropdown-body {
+        min-width: 332px;
+    }
+    .grace-dropdown-open .grace-btn-group.cata-dropdown.grace-catedropdown-channelSelect .grace-cata-dropdown-body {
+        top: 40px;
+        width: 170px;
+        min-width: 170px;
+    }
+    .grace-catedropdown-channelSelect {
+        margin-right: 5px;
+    }
+    .gss-bd-no-packdate .grace-catedropdown-channelSelect {
+        margin-right: 40px;
+    }
+/* 重写graceCataDropdown组件样式 end */
+
+
+/* 维度筛选组件结果展示 start*/
+    .gss-hd {
+        height: 62px;
+    }
+    .gss-btn {
+        float: left;
+        width: 38px;
+        height: 62px;
+        margin-right: 10px;
+        background: url(../../img/dim-switch-default.png) 0px center no-repeat;
+        background-size: 35px 35px;
+        cursor: pointer;
+    }
+    .gss-btn:hover {
+        background: url(../../img/dim-switch-icon-hover.png) 0px center no-repeat;
+        background-size: 35px 35px;
+    }
+    .gss-btn.gss-btn-open {
+        background: url(../../img/dim-switch-active.png) 0px center no-repeat;
+        background-size: 35px 35px;
+    }
+
+    /*维度结果样式 start*/
+    .gss-dim-res-list {
+        float: left;
+        padding-top: 14px;
+        cursor: pointer;
+    }
+    .gss-dim-res-item{
+        float: left;
+        height: 34px;
+        line-height: 34px;
+        margin-right: 28px;
+        font-size: 14px;
+        overflow: hidden;
+        vertical-align: top;
+    }
+    .gss-dim-res-item-title {
+        color: #666;
+        vertical-align: top;
+    }
+    .gss-dim-res-item-name{
+        display: inline-block;
+        width: 186px;
+        height: 34px;
+        padding: 0 18px;
+        background: #e9ecee;
+        border-radius: 17px;
+        margin-left: 10px;
+        color: #999;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+    .gss-dim-res-channel{ margin-right: 10px;}
+    .gss-dim-res-category .gss-dim-res-item-name{
+        width: 244px;
+    }
+    .gss-dim-res-model .gss-dim-res-item-name {
+        width: 80px;
+    }
+    .gss-dim-res-datepicker .gss-dim-res-item-name {
+        width: 260px;
+    }
+    .gss-dim-res-channel .gss-dim-res-item-name {
+        width: 140px;
+    }
+    @media screen and (max-width:1670px) {
+        .gss-dim-res-item-name {
+            width: 130px;
+        }
+
+        .gss-dim-res-datepicker .gss-dim-res-item-name {
+            width: 160px;
+        }
+
+    }
+    @media screen and (max-width:1440px) {
+        .gss-dim-res-category .gss-dim-res-item-name {
+            width: 180px;
+        }
+        .gss-dim-res-item {
+            margin-right: 14px;
+        }
+    }
+    /*维度结果样式 end*/
+
+    /*sku结果样式 start*/
+    .gss-sku-res-list{
+        float: left;
+        height: 62px;
+        margin-left: 10px;
+    }
+    .gss-sku-res-item{
+        float: left;
+        height: 62px;
+    }
+    .gss-sku-res-img{
+        width: 60px;
+        height: 60px;
+        border: 1px solid #e4ebf0;
+    }
+    .gss-sr-name {
+        line-height: 30px;
+    }
+    .gss-sku-res-cont {
+        min-width: 180px;
+        margin-left: 10px;
+        margin-right: 70px;
+    }
+    .gss-sku-res-list .gss-dim-res-item {
+        height: 62px;
+        line-height: 62px;
+    }
+    .gss-sku-res-list .gss-dim-res-item-name {
+        line-height: 34px;
+        vertical-align: middle;
+    }
+    /*sku结果样式 end*/
+/* 维度筛选组件结果展示 end*/
+
+/* 维度筛选Cont start */
+    .gss-bd-box{position: absolute; left: 0}
+    .gss-bd {
+        width: 950px;
+        box-shadow: 2px -1px 8px 2px #e5e8eb;
+        background: #fcfdff;
+    }
+    .gss-bd-no-packdate {
+        width: 780px;
+    }
+    .gss-bd-no-cate {
+        width: 600px;
+    }
+    .gss-bd-title-list {
+        width: 370px;
+    }
+    .gss-bd-title-list:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .gss-bd-title-item {
+        float: left;
+        position: relative;
+        height: 42px;
+        line-height: 42px;
+        width: 50%;
+        text-align: center;
+        font-size: 12px;
+        color: #959ca6;
+        background: #fcfdff;
+        cursor: pointer;
+    }
+    .gss-bd-title-item.active {
+        background: #fcfdff;
+        color: #1b2b55;
+    }
+    .gss-bd-title-item.active .gss-bd-title-item-line {
+        position: absolute;
+        width: 152px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -76px;
+        background: #0174e7;
+    }
+    .gss-bd-title-list-single .gss-bd-title-item-single {
+        font-size: 13px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .gss-bd-cont-list:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .gss-bd-cont-item {
+        display: none;
+        min-height: 436px;
+        min-width: 370px;
+        float: left;
+    }
+    .gss-bd-cont-item.active{
+        display: block;
+    }
+    .gss-bd-cont-other-item {
+        width: 560px;
+        padding-top: 30px;
+    }
+    .gss-bd-no-packdate .gss-bd-cont-other-item {
+        width: 60px;
+    }
+    .gss-bd-ft {
+        height: 52px;
+        line-height: 52px;
+        background: #f2f6f9;
+    }
+    .gss-bd-ft-btn {
+        float: right;
+        width: 68px;
+        height: 32px;
+        margin: 10px 16px 0 0;
+        color: #7f7f7f;
+        border: none;
+        background-color: #e6ecf4;
+        cursor: pointer;
+        outline: none;
+    }
+    .gss-bd-ft-btn.gss-bd-ft-btn-ok {
+        background: #2576df;
+        color: #fff
+    }
+/* 维度筛选Cont start */
+
+/* 真正的维度筛选组件样式  start*/
+    .dim-list{
+        padding-left: 20px;
+        padding-top: 38px;
+    }
+    .dim-item {
+        padding-bottom: 10px;
+    }
+    .dim-item-name {
+        color: #666;
+        height: 31px;
+        line-height:30px;
+        font-size: 12px;
+    }
+/* 真正的维度筛选组件样式  end*/
+
+/* sku筛选样式 start*/
+    .sku-switch-box{
+        padding-top: 68px;
+    }
+    .sku-input-box {
+        width: 330px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #d5e0f2;
+        border-radius: 2px;
+        margin: 0 auto;
+        padding: 0 0 0 10px;
+        background: #fff ;
+        cursor: default;
+    }
+    .sku-input {
+        width: 280px;
+        height: 22px;
+        border: none 0;
+        cursor: default;
+    }
+    .sku-input-btn {
+        width: 32px;
+        height: 22px;
+        border: 0 none;
+        text-indent: -99999rem;
+        border-left: 1px solid #d5e0f2;
+        background: #fff url("../../img/search-icon.png") center center no-repeat;
+        background-size: 14px 14px ;
+        cursor: pointer;
+    }
+    .sku-search-res{
+        width: 330px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 16px;
+        background: #e7eef6;
+    }
+    .sku-search-res:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .sku-search-res-img, .sku-search-res-cont {
+        float: left;
+    }
+    .sku-search-res-img {
+        height: 59px;
+        width: 59px;
+        border: 1px solid #dfe7ef;
+    }
+    .sku-search-res-cont {
+        width: 220px;
+        line-height: 20px;
+        margin-left: 10px;
+    }
+    .sku-search-res-cont-name {
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        margin-top: 10px;
+    }
+
+    .sku-search-error {
+        width: 330px;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+        border: 1px solid #d16666;
+        border-radius: 3px;
+        background: #e27777;
+        margin: 24px auto 0;
+        color: #fff;
+    }
+    .sku-search-error-icon, .sku-search-error-tip {
+        display: inline-block;
+    }
+    .sku-search-error-icon {
+        width: 20px;
+        height: 20px;
+        background: url("../../img/sku-error-icon.png") no-repeat;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 10px
+    }
+/* sku筛选样式 end*/
+
+/* 重写渠道下拉组件样式 start */
+
+/* 重写渠道下拉组件样式 end */

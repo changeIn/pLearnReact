@@ -1,0 +1,114 @@
+.industry-trend-page {
+    .hide {
+        display: none !important;
+    }
+    .grace-checkbox {
+        margin: 0 20px;
+        .grace-checkbox-item {
+            min-width: 105px;
+            margin-bottom: 15px;
+        }
+    }
+    .section {
+        background-color: #fff;
+        margin-bottom: 15px;
+        padding-bottom: 17px;
+        .grace-checkbox .item-container {
+            // 按照设计师要求调整宽度
+            width: 85%;
+        }
+        .grace-checkbox-select-text {
+            // 按照设计师要求调整左边距
+            margin-left: 45px;
+        }
+        .section-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 14px;
+            margin: 0 30px;
+            padding: 20px 0;
+        }
+        .grace-common-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            table-layout: fixed;
+        }
+        th {
+            width: 100px;
+        }
+        th.Rank {
+            width: 50px;
+        }
+        th.ProName {
+            width: 150px;
+        }
+        td.Rank {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            text-align: center;
+            div {
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                line-height: 30px;
+                border-radius: 30px;
+                &.rank-1 {
+                    background-color: #DB4545;
+                    color: #fff;
+                }
+                &.rank-2 {
+                    background-color: #435D79;
+                    color: #fff;
+                }
+                &.rank-3 {
+                    background-color: #57A1A7;
+                    color: #fff;
+                }
+            }
+        }
+        td.ProName {
+            position: relative;
+            .img {
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                border: 1px solid #EFF3F6;
+            }
+            .txt {
+                margin-left: 70px;
+                div {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.RankChange {
+                .chain-tag.no-change {
+                    background-color: #EBEEEF;
+                    color: #656565;
+                }
+                .chain-tag.new-enter {
+                    background-color: #FFE8D5;
+                    color: #F0872B;
+                }
+            }
+        }
+    } // 设置弹出框宽度
+    .grace-common-modal {
+        .r-modal-wrap .r-modal {
+            width: 70%;
+        }
+        .grace-checkbox {
+            margin: 20px 32px;
+        }
+    }
+}

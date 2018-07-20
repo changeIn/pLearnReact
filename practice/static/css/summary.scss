@@ -1,0 +1,230 @@
+@charset "UTF-8";
+@import "./mixin";
+
+/****
+  字体大小用px，且值设置成为变量
+  边距、长宽用rem
+*/
+
+
+/**dpr-1 font-size**/
+$tips-fontSize: 12px;
+$deal-target-title-fontSize: 16px;
+$deal-target-progress-text-fontSize: 12px;
+$deal-target-bar-text-fontSize: 12px;
+$deal-target-bar-value-fontSize: 18px;
+$viewflow_rank_hint-fontSize:12px;
+$ranklist-item-fontSize:12px;
+$ranklist-item-name-fontSize:15px;
+$label-icon-fontSize:9px;
+
+
+
+#realtime-content .top-menu {
+	ul>li {
+		width: 33.3333%;
+		box-sizing: border-box;
+	}
+}
+
+#realtime-content {
+	.tips {
+		height: 0.666667rem;
+		color: #999;
+		line-height: 0.666667rem;
+		@include font-dpr($tips-fontSize)
+	}
+	.tips label {
+		margin-right: 0.133333rem;
+		margin-left: 0.4rem;
+	}
+
+	.page-right-tips{
+		/*margin-left: 0.4rem;*/
+		margin-top: 0.2rem;
+		margin-bottom: 0.4rem;
+		text-align: center;
+		color: #999;
+		@include font-dpr($tips-fontSize)
+
+	}
+}
+
+/**  实时业绩-任务进度  **/
+@mixin bar-text-lineHeight-dpr($font-size){
+    line-height: ($font-size+4);
+
+    [data-dpr="2"] & {
+        line-height: ($font-size+2) * 2;
+    }
+
+    [data-dpr="3"] & {
+        line-height: ($font-size+2) * 3;
+    }
+}
+
+.deal-progress {
+	margin-top: 0.1rem;	
+    padding: 0 0.4rem;
+	background-color: #fff;
+	> h3 {
+		padding: 0.53rem 0 0 0;
+		@include font-dpr($deal-target-title-fontSize);
+	}
+	> div {
+		margin: 0.8rem 0;				
+		&:last-of-type {
+			margin-bottom: 0;
+			.progress-bar {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.progress-text {
+		margin-bottom: 0.27rem;
+		color: #999;
+		@include font-dpr($deal-target-progress-text-fontSize);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		> span {
+			color: #333;
+		}
+	}
+
+	.progress-bar {
+		padding-bottom: 0.8rem;
+		border-bottom: 2px solid #eee;
+		> div {
+			margin-top: 0.6rem;
+			
+			.text {
+				float: left;
+				@include font-dpr($deal-target-bar-text-fontSize);
+				@include bar-text-lineHeight-dpr($deal-target-bar-value-fontSize);
+			}
+			.value {
+				float: right;
+				@include font-dpr($deal-target-bar-value-fontSize);
+			}
+			.bar {
+				width: 100%;
+				height: 0.24rem;
+				position: relative;
+				.front, .back {				
+					height: 0.12rem;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					border-radius: 0.06rem;
+				}
+				.front {
+					background: #1dffc7;
+					background: linear-gradient(0, #00d0ef, #1dffc7);
+				}
+				.back {
+					width: 100%;
+					background: #eee;
+				}
+			}
+			&.time-progress .bar .front {
+				background: #f85310;
+				background: linear-gradient(0, #ff8a23, #f85310);
+			}
+				
+			&.excess {
+				.value {
+					color: #fd4545;
+				}
+				.bar .front {				
+					height: 0.24rem;
+					border-radius: 0.12rem;
+					background: #fd4545;
+				}
+				.bar .back {
+					background: linear-gradient(0, #00d0ef, #1dffc7);
+				}				
+			}
+		}
+	}
+}
+
+
+/**  实时业绩-流量  **/
+.viewflow_rank_hint {
+	display: block;
+	background: #fff;
+	padding-left: 0.4rem;
+	margin-top: 0.02666666666666667rem;
+	line-height: 0.8533333333333334rem;
+	@include font-dpr($tips-fontSize);
+}
+
+.viewflow_ranklist .viewflow_ranklist_item_wrapper {
+	border-bottom: 1px solid #eeeeee;
+}
+
+.viewflow_summary,
+.viewflow_ranklist {
+	background: #fff;
+}
+
+.viewflow_ranklist_item_wrapper {
+	padding:  0.4rem 0;
+	margin: 0 0.4rem;
+	line-height: 0.4rem;
+	.item_num,
+	.item_name {
+		@include font-dpr($ranklist-item-name-fontSize);
+		display: inline-block;
+		width: 8.53333rem;
+		vertical-align: text-top;
+	}
+	.item_num{
+		width: .666667rem;
+		display: inline-block;
+	}
+}
+
+.item_detail {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-start;
+	@include font-dpr($ranklist-item-fontSize);
+	margin-top: 0.3333333333333333rem;
+	margin-left: 0.6666666666666666rem;
+	text-align: center;
+	.yesterday {
+		flex-grow: 2;
+	}
+	.today {
+		label {
+			margin-right: 0.13333333333333333rem;
+		}
+	}
+	.icon_label {
+		background: #eeeeee;
+		border-radius: 0.666667rem;
+		margin-left: 0.09333333333333334rem;
+		@include font-dpr($label-icon-fontSize);
+		padding: 0 0.066667rem;
+		color: #666;
+		display: inline-block;
+	}
+}
+#realtime-content .viewflow_summary .ToCartNum .summary-detail-btn{
+	visibility: hidden;
+}
+
+.notdata-hints{
+	padding: 0.4rem;
+	text-align: center;
+}
+
+.deal-constitute-container{
+	.grace-common-modal .r-modal-wrap .r-modal{
+		width: 1080px;
+	}
+}

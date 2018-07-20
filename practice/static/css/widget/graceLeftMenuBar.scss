@@ -1,0 +1,307 @@
+.left-menu {
+    width: 190px;
+}
+.left-menu{ width: 190px}
+.lmc-collapsed{ width: 64px;}
+/*header start*/
+.lmc-header{
+    padding:24px 0 0;
+    border-bottom: 2px solid #f6f6f6;
+}
+/*logo start*/
+.lmc-logo {
+    text-align: center;
+}
+.lmc-logo .logo-icon, .lmc-logo .logo-name{
+    display: inline-block;
+}
+.logo-name {
+    line-height: 40px;
+    vertical-align: top;
+    font-size: 20px;
+    margin-left: 12px;
+}
+/*logo end*/
+/*header brand img start*/
+.lmc-brand-img {
+    text-align: center;
+    margin-top: 47px;
+}
+/*header brand img end*/
+/*header brand name start*/
+.lmc-brand-select {
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+}
+.lmc-brand-select .lmc-brand-select-res{
+    height: 30px;
+    line-height: 29px;
+    position: relative;
+    margin: 0 11px;
+    font-size: 12px;
+    text-align: center;
+    background: #f3f6f8;
+    border-radius: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: default;
+}
+.lmc-brand-select .lmc-brand-select-arrow{
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    right: 20px;
+    top: 50%;
+    margin-top: -4px;
+    background: url("../../img/select-arrow.png") no-repeat;
+}
+.lmc-brand-select .lmc-brand-select-list{
+    position: absolute;
+    width: 310px;
+    top: 30px;
+    left: 20px;
+    display: none;
+    border: 1px solid #f1f1f1;
+    box-shadow: 2px 0 6px #f1f1f1;
+    background: #fff;
+    padding: 10px 0;
+}
+.lmc-brand-select .lmc-brand-select-list-open{
+    display: block;
+}
+.lmc-brand-select .lmc-brand-select-opt, .lmc-brand-select .lmc-bso {
+    height: 46px;
+    line-height: 46px;
+    cursor: pointer;
+}
+.lmc-brand-select .lmc-bso-flag {
+    padding: 5px;
+    margin-left: 16px;
+    margin-right: 12px;
+    border-radius: 4px;
+    color: #2576df;
+    background: #e2ecfd;
+
+}
+.lmc-brand-select .lmc-bso-flag.lmc-bso-flag-brand {
+    color: #60a36c;
+    background: #e4f6e9;
+}
+.lmc-brand-select .lmc-bso-name{ color: #666;}
+/*header brand name end*/
+/*header show/hide button start*/
+.lmc-fold{
+    text-align: center;
+}
+.lmc-fold-btn{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: none 0;
+    cursor: pointer;
+    background: url("../../img/fold-btn-icon.png") 22px center no-repeat;
+    background-size: 13px 13px;
+}
+.lmc-collapsed .lmc-fold-btn {
+    background: url("../../img/fold-btn-icon-right.png") 22px center no-repeat;
+    background-size: 13px 13px;
+}
+/*header show/hide button end*/
+/*header end*/
+
+/*menu start*/
+.lmc-menu{
+    font-size: 14px;
+    padding-top: 20px;
+}
+.lmc-firlv-menu-item, .lmc-fmi, .lmc-fmi-cont, .lmc-fmi-cont-no-submenu {
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 2;
+}
+.lmc-fmi-cont, .lmc-fmi-cont-no-submenu{
+    height: 48px;
+    line-height: 48px;
+    padding-left: 65px;
+}
+.lmc-fmi-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 28px;
+    margin-top: -10px;
+    background: url("../../img/jiaoyi.png") no-repeat;
+    background-size: 100%;
+}
+.flowAnalysis-icon .lmc-fmi-icon{
+    background:url("../../img/liuliang.png") no-repeat center center ;
+    background-size: 100%;
+}
+.tradeAnalysis-icon .lmc-fmi-icon{
+    background: url("../../img/jiaoyi.png") no-repeat center center;
+    background-size: 100%;
+}
+.indAnalysis-icon .lmc-fmi-icon {
+    background: url("../../img/hangye.png") no-repeat center center;
+    background-size: 100%;
+}
+.realTimeView-icon .lmc-fmi-icon {
+    background: url("../../img/shishi.png") no-repeat center center;
+    background-size: 100%;
+}
+.helpcenter-icon .lmc-fmi-icon{
+    background-position: -1px -100px;
+}
+.lmc-fmi-cont:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.lmc-fmi-cont:hover:before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 48px;
+    top: 0;
+    left: 0;
+    background: #f3f6f8;
+}
+.lmc-fmi-cont:after{
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    top: 50%;
+    right: 24px;
+    margin-top: -3px;
+    background: url("../../img/down-arrow-1.png") no-repeat;
+    background-size: 100%;
+}
+
+/*second menu start*/
+.lmc-menu-seclv-item, .lmc-menu-seclv-link {
+    height: 44px;
+    line-height: 43px;
+}
+.lmc-menu-seclv-link{
+    display: block;
+    text-align: left;
+    padding-left: 72px;
+    color: #999;
+    text-decoration: none;
+}
+.lmc-menu-seclv-list{
+    display: none;
+}
+.lmc-fmi-active .lmc-menu-seclv-list {
+    display: block;
+}
+//.lmc-fmi-select .cur-menu {
+//    background: #f3f6f8;
+//}
+.lmc-fmi-active .cur-menu a{
+    color: #2576df;
+}
+/*second menu start*/
+
+.lmc-fmi-active .lmc-fmi-cont, .lmc-fmi-cont:hover {
+    color: #2576df;
+    background: #f3f6f8;
+}
+.lmc-fmi-active .lmc-fmi-cont:before {
+    background: #5fa1fc;
+}
+.lmc-fmi-active .lmc-fmi-cont:after {
+    background: url("../../img/down-arrow-active.png") no-repeat;
+    background-size: 100%;
+}
+.lmc-fmi-active .lmc-fmi-icon {
+    background: url("../../img/jiaoyi-active.png") no-repeat center center;
+    background-size: 100%;
+}
+.lmc-fmi-active .tradeAnalysis-icon .lmc-fmi-icon {
+    background: url("../../img/jiaoyi-active.png") no-repeat center center;
+    background-size: 100%;
+}
+.lmc-fmi-active .flowAnalysis-icon .lmc-fmi-icon {
+    background: url("../../img/liuliang-active.png") no-repeat center center;
+    background-size: 100%;
+}
+.lmc-fmi-active .indAnalysis-icon .lmc-fmi-icon {
+    background: url("../../img/hangye-active.png") no-repeat center center;
+    background-size: 100%;
+}
+.lmc-fmi-active .realTimeView-icon .lmc-fmi-icon {
+    background: url("../../img/shishi-active.png") no-repeat center center;
+    background-size: 100%;
+}
+.lmc-fmi-active .helpcenter-icon .lmc-fmi-icon {
+    background-position: -24px -100px;
+}
+/*menu end*/
+
+/*tuichu*/
+.exit-menu {
+    height: 24px;
+    line-height: 24px;
+    margin-top: 200px;
+}
+.exit-menu a{
+    display: inline-block;
+    height: 20px;
+    width: 100px;
+    background: url("../../img/logout-icon.png") no-repeat;
+    background-size: 20px 20px;
+    margin-left: 28px;
+    padding-left: 37px;
+    color: #000;
+}
+.lmc-collapsed .exit-menu {
+    overflow: hidden;
+}
+.lmc-collapsed .exit-menu a {
+    text-indent: -999px;
+    margin-left: 25px;
+}
+/**/
+
+/*菜单折叠时 start*/
+.lmc-collapsed .logo-name, .lmc-collapsed .lmc-brand-img, .lmc-collapsed .lmc-brand-select, .lmc-collapsed .lmc-fmi-cont:before, .lmc-collapsed .lmc-fmi-cont:after,
+.lmc-collapsed .lmc-fmi-name, .lmc-collapsed .lmc-menu-seclv-list{
+    display: none
+}
+.lmc-collapsed .lmc-fmi.lmc-fmi-fold-hover .lmc-menu-seclv-list {
+    display: block;
+    position: absolute;
+    width: 118px;
+    left: 72px;
+    top: 0px;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 2px 0 6px #f1f1f1;
+}
+.lmc-collapsed .lmc-fmi.lmc-fmi-fold-hover .lmc-menu-seclv-list .lmc-menu-seclv-item,
+.lmc-collapsed .lmc-fmi.lmc-fmi-fold-hover .lmc-menu-seclv-list .lmc-menu-seclv-link{
+    height: 34px;
+    line-height: 32px;
+    text-align: left;
+    padding-left: 15px;
+}
+.lmc-collapsed .lmc-fmi-icon {
+    left: 50%;
+    margin-left: -10px;
+}
+.lmc-collapsed .lmc-fmi-active .lmc-fmi-cont {
+    background: #fff
+}
+/*菜单折叠时 end*/
+

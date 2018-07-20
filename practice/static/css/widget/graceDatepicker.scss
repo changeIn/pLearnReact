@@ -1,0 +1,348 @@
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+//
+//@keyframes mymove {
+//0%   {opacity: 0; display: block}
+//25%  {opacity: 0.75; }
+//50%  {opacity: 1;}
+//75%  {opacity: 0.75;}
+//100% {opacity: 0; display: none;}
+//}
+
+.grace-datepicker-error-tip{
+  position: absolute;
+  width: 220px;
+  height: 34px;
+  line-height: 33px;
+  bottom: 20px;
+  left: 130px;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #da4a4a;
+  background-color: #e57070;
+  display: none;
+}
+.grace-datepicker-error-tip.open{
+  display: block;
+  //animation:mymove 3s 1;
+  //-webkit-animation:mymove 3s 1;
+}
+.error-tip-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 17px;
+  margin-top: -2px;
+  vertical-align: middle;
+  background: url(../../img/datepicker-error-tip-icon.png) no-repeat;
+}
+.error-tip-text{
+  margin-left: 10px;
+}
+
+.grace-sz-date-picker {
+  font: 12px/1 Verdana, "Microsoft YaHei", Arial, "\5b8b\4f53", sans-serif
+}
+
+.grace-sz-date-picker table {
+  border-collapse: separate;
+  border-spacing: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.grace-sz-date-picker table td,
+.grace-sz-date-picker table th {
+  border: 0 none;
+  text-align: center;
+}
+
+
+.grace-sz-date-picker{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #f6f6f6;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  overflow: hidden
+}
+
+.grace-sz-date-picker.multi-datepicker {
+  width: 384px;
+  background-color: #ffffff;
+}
+
+.grace-sz-date-picker.dc-grace-sz-date-picker {
+  width: 459px;
+}
+
+.grace-datepicker{
+  padding-bottom: 200px;
+  margin-bottom: -200px;
+  background: #fff
+}
+
+.grace-datepicker.grace-quick-datepicker{
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.grace-datepicker-cont {
+  margin: 25px 35px
+}
+
+.quick-list{
+  cursor: pointer;
+  font-size: 14px;
+}
+.quick-list-select{
+  color: #2576df
+}
+
+.quick-type-list{
+  float: left;
+  width: 90px;
+  min-height: 340px;
+  background: #f6f9fb
+}
+.dc-grace-sz-date-picker .quick-type-list {
+  width: 164px;
+}
+.quick-type-item{
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 12px;
+  cursor: default;
+  &:first-child{
+    margin-top: 25px;
+  }
+}
+
+.quick-type-item.cur-item {
+  background-color: #e1eaf0;
+  color: #333333;
+}
+
+.quick-type-item.selected-date-item{
+  color: #333333
+}
+
+.quick-date-dashbord{
+  width:290px;
+  float: left;
+  height: 100%
+}
+
+.gdhc{
+  height: 20px;
+  margin-bottom: 30px;
+}
+
+.gdhc-nav-li,
+.date-item {
+  box-sizing: border-box;
+  cursor: pointer
+}
+
+.nav-date {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Micrsoft Yahei', Arial, sans-serif;
+  color: #333
+}
+
+.arrow-btn {
+  width: 18px;
+  height: 18px;
+  margin: 1px 14px 1px 0;
+  background: url(../../img/widget/date-picker-arrow.png) no-repeat 0 center;
+  &.year-next-arrow{
+    margin-right: 0;
+  }
+  &.month-prev-arrow{
+    margin-right: 0;
+  }
+}
+
+.dc-grace-datepicker .arrow-btn {
+  background-image: url(../../img/widget/date-picker-arrow-disable.png);
+}
+
+.month-prev-arrow {
+  background-position: -20px center;
+}
+
+.month-next-arrow {
+  background-position: -42px center;
+}
+.dc-grace-datepicker .month-next-arrow {
+  background-position: -41px center;
+}
+.year-next-arrow {
+  background-position: -62px center;
+}
+
+.arrow-btn-disable{
+  width: 18px;
+  height: 18px;
+  margin: 1px 14px 1px 0;
+  background: url(../../img/widget/date-picker-arrow-disable.png) no-repeat 0 center;
+  cursor: not-allowed;
+  &.month-prev-arrow-disable{
+    margin-right: 0;
+  }
+}
+
+.month-prev-arrow-disable{
+  background-position: -20px center;
+}
+
+.month-next-arrow-disable{
+  background-position: -41px center;
+}
+
+.dt-hd-tr {
+  height: 30px;
+  margin-bottom: 10px;
+  th>span{
+    font-size: 12px;
+    font-weight: normal;
+    color: #666666;
+  }
+}
+.grace-datepicker table.datepick-table td, .grace-datepicker table.datepick-table th{
+  font-size: 12px!important;
+}
+
+.week-tr .date-item:hover{
+  background: #e6eef8;
+}
+
+.date-item {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: #333;
+  cursor: pointer
+}
+
+.dt-bd-tr .dt-bd-td:first-child .month-item{
+  margin-right: 30px;
+}
+
+.dt-bd-tr .dt-bd-td:last-child .month-item{
+  margin-left: 30px;
+}
+.month-item{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer
+}
+
+.week-tr:hover .date-item,
+.date-item:hover,
+.month-item:hover {
+  background: #e6eef8
+}
+
+.dt-bd-tr .dis-select {
+  background: #fff;
+  color: gray;
+}
+
+.pre-month-td,
+.next-month-td {
+  color: #1b1b1b;
+}
+
+.week-tr .pre-month-td .today-date, .week-tr .next-month-td .today-date{
+  color: gray;
+  background: #ffd5d6;
+}
+
+.cur-month-td {
+  color: #666666;
+}
+
+.week-tr .cur-month-td .today-date,
+.week-tr .pre-month-td .today-date,
+.week-tr .next-month-td .today-date,
+.cur-month-td .today-date,
+.date-item.today-date,
+.month-item.cur-month {
+  background-color: #2576df;
+  color: #fefefe
+}
+//.week-tr .cur-month-td:first-child .today-date,
+//.week-tr .cur-month-td:last-child .today-date{
+//  background-color: #1052a7!important;
+//}
+
+.dt-bd-tr .dis-select,
+.dt-bd-tr:hover .dis-select {
+  background: #fff;
+  color: #dddddd;
+  cursor: default
+}
+
+.input-calendar {
+  position: relative;
+  width: 298px;
+  display: table;
+  z-index: 100;
+  border-collapse: separate
+}
+
+.ic-input {
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  border: 1px solid #d5e0f2;
+  box-shadow: none;
+  line-height: 1.42857143;
+  font-size: 12px;
+  letter-spacing: normal;
+  font-family: Verdana, "Microsoft YaHei", Arial, 宋体, sans-serif;
+  cursor: pointer;
+}
+
+.input-group-btn {
+  position: absolute;
+  right: 2px;
+  top: 1px;
+  padding: 6px 12px;
+  cursor: pointer
+}
+
+.grace-icon-calendar {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../img/quick-datepicker.png) no-repeat;
+  background-size: 100% 100%;
+}
+

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+$date-show-fontSize: 14px;
+
+
+.msz-quickdate-container{
+  height: .4rem;
+  line-height: .4rem;
+  width: 100%;
+  padding: .4rem 0;
+}
+.msz-quickdate-container .date-container{
+  position: relative;
+  height: .4rem;
+}
+.msz-quickdate-container .date-container .arrow-btn{
+  position: absolute;
+  top:1px;
+  cursor: pointer;
+  width: .213333rem;
+  height: .373333rem;
+  background-size: .213333rem .373333rem;
+}
+.msz-quickdate-container .date-container .gray-btn{
+  opacity: .4;
+}
+.msz-quickdate-container .date-container .text-align-c{
+  text-align: center;
+}
+.msz-quickdate-container .date-container .text-align-c .date-show{
+  display: inline-block;
+  text-align: center;
+  font-size: $date-show-fontSize;
+}
+[data-dpr="2"] .msz-quickdate-container .date-container .text-align-c .date-show{
+  font-size: $date-show-fontSize*2;
+}
+[data-dpr="3"] .msz-quickdate-container .date-container .text-align-c .date-show{
+  font-size: $date-show-fontSize*3;
+}
+.msz-quickdate-container .date-container .date-prev{
+  left: .4rem;
+  background-image: url('../../img/left-arrow.png');
+}
+.msz-quickdate-container .date-container .date-next{
+  right: .4rem;
+  background-image: url('../../img/right-arrow.png');
+}

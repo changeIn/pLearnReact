@@ -1,0 +1,35 @@
+
+.grace-rate-bar {
+    .bar-container{
+        min-width: 160px;
+        span{
+            display: inline-block;
+        }
+        .rate-value{
+            padding-right: 10px;
+            width: 70px;
+            text-align: right;
+        }
+        .rate-bar-container{
+            width:  calc(100% - 70px);
+            text-align: left;
+            height: 10px;
+            .rate-bar{
+                display: inline-block;
+                width: 0;
+                height: 10px;
+                border-radius: 5px;
+                background-color: #749ce2;
+            }
+        }
+        .variation-trend{
+
+            &.decline{
+
+            }
+            &.rise{
+
+            }
+        }
+    }
+}

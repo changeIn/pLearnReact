@@ -1,0 +1,963 @@
+.grace-grid-wrapper{
+    //position: relative;
+    //padding: 0 30px;
+    //background-color: #ffffff;
+}
+.grace-grid {
+    font-size: 13px;
+    color: #666666;
+    transition: opacity 0.3s ease;
+    position: relative;
+    line-height: 1.5;
+    overflow: hidden;
+    background-color: #fff;
+}
+.grace-grid .grace-grid-scroll {
+    overflow: auto;
+}
+.grace-grid .grace-grid-scroll table {
+    width: auto;
+    min-width: 100%;
+}
+.grace-grid .grace-grid-header {
+    overflow: hidden;
+    background: #f7f7f7;
+}
+.grace-grid-tbody > tr.grace-grid-row-selected td {
+    background: #fafafa;
+}
+.grace-grid-fixed-header .grace-grid-body {
+    background: #fff;
+    position: relative;
+}
+.grace-grid-fixed-header .grace-grid-body-inner {
+    height: 100%;
+    overflow: scroll;
+}
+.grace-grid-fixed-header .grace-grid-scroll .grace-grid-header {
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    //overflow-y: scroll;
+    box-sizing: border-box;
+}
+.grace-grid .grace-grid-title {
+    padding: 16px 8px;
+    border-top: 1px solid #e9e9e9;
+}
+.grace-grid .grace-grid-content {
+    position: relative;
+}
+.grace-grid .grace-grid-footer {
+    padding: 16px 8px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.grace-grid .grace-grid-placeholder {
+    padding: 16px 8px;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    text-align: center;
+    position: relative;
+}
+.grace-grid .grace-grid-placeholder-fixed-columns {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+.grace-grid table {
+    width: 100%;
+    border-collapse: separate;
+    text-align: left;
+}
+.grace-grid th {
+    background: #f9f9f9;
+    color: #1b1b1b;
+    font-weight: normal!important;
+    transition: background .3s ease;
+    border-bottom: 1px solid #eaeaea;
+}
+.grace-grid td {
+    border-bottom: 1px solid #e9e9e9;
+}
+.grace-grid td:empty:after {
+    content: '.';
+    visibility: hidden;
+}
+.grace-grid tr {
+    transition: all .3s ease;
+}
+.grace-grid tr:hover {
+    background: #eaf8fe;
+}
+.grace-grid tr.grace-grid-row-hover {
+    background: #eaf8fe;
+}
+.grace-grid th,
+.grace-grid td {
+    padding: 16px 8px;
+    white-space: nowrap;
+}
+.grace-grid-expand-icon-col {
+    width: 34px;
+}
+.grace-grid-row-expand-icon,
+.grace-grid-expanded-row-expand-icon {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 22px;
+    height: 17px;
+    text-align: center;
+    line-height: 17px;
+    //border: 1px solid #e9e9e9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    //background: #fff;
+}
+.grace-grid-row-spaced,
+.grace-grid-expanded-row-spaced {
+    visibility: hidden;
+}
+.grace-grid-row-spaced:after,
+.grace-grid-expanded-row-spaced:after {
+    content: '.';
+}
+.grace-grid-row-expanded:after,
+.grace-grid-expanded-row-expanded:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    background: url(../../img/widget/grid-expand.png) no-repeat 0 0;
+}
+.grace-grid-row-collapsed:after,
+.grace-grid-expanded-row-collapsed:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    background: url(../../img/widget/grid-expand.png) no-repeat 0 -28px;
+}
+tr.grace-grid-expanded-row {
+    background: #f7f7f7;
+}
+tr.grace-grid-expanded-row:hover {
+    background: #f7f7f7;
+}
+.grace-grid-column-hidden {
+    display: none;
+}
+.grace-grid-prev-columns-page,
+.grace-grid-next-columns-page {
+    cursor: pointer;
+    color: #666;
+    z-index: 1;
+}
+.grace-grid-prev-columns-page:hover,
+.grace-grid-next-columns-page:hover {
+    color: #2db7f5;
+}
+.grace-grid-prev-columns-page-disabled,
+.grace-grid-next-columns-page-disabled {
+    cursor: not-allowed;
+    color: #999;
+}
+.grace-grid-prev-columns-page-disabled:hover,
+.grace-grid-next-columns-page-disabled:hover {
+    color: #999;
+}
+.grace-grid-prev-columns-page {
+    margin-right: 8px;
+}
+.grace-grid-prev-columns-page:before {
+    content: '<';
+}
+.grace-grid-next-columns-page {
+    float: right;
+}
+.grace-grid-next-columns-page:before {
+    content: '>';
+}
+.grace-grid-fixed-left,
+.grace-grid-fixed-right {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.grace-grid-fixed-left table,
+.grace-grid-fixed-right table {
+    width: auto;
+    background: #fff;
+}
+.grace-grid-fixed-left {
+    left: 0;
+    box-shadow: 4px 0 4px rgba(100, 100, 100, 0.1);
+}
+.grace-grid-fixed-left .grace-grid-body-inner {
+    margin-right: -20px;
+    padding-right: 20px;
+}
+.grace-grid-fixed-header .grace-grid-fixed-left .grace-grid-body-inner {
+    padding-right: 0;
+}
+.grace-grid-fixed-right {
+    right: 0;
+    box-shadow: -4px 0 4px rgba(100, 100, 100, 0.1);
+}
+.grace-grid-fixed-right .grace-grid-expanded-row {
+    color: transparent;
+    pointer-events: none;
+}
+//.grace-grid.grace-grid-scroll-position-left .grace-grid-fixed-left {
+//    box-shadow: none;
+//}
+//.grace-grid.grace-grid-scroll-position-right .grace-grid-fixed-right {
+//    box-shadow: none;
+//}
+/*~~~~~~~~~~~~~表格显示样式~~~~~~~~~~~~~~~~~~*/
+.grace-grid-bordered .grace-grid-thead > tr > th,
+.grace-grid-bordered .grace-grid-tbody > tr > td {
+    border-right: 1px solid #eeeeee;
+}
+.grace-grid-bordered .grace-grid-thead > tr > th {
+    border-bottom: 1px solid #eeeeee;
+}
+.grace-grid-bordered .grace-grid-header > table,
+.grace-grid-bordered .grace-grid-body > table,
+.grace-grid-bordered .grace-grid-fixed-left table,
+.grace-grid-bordered .grace-grid-fixed-right table {
+    border: 1px solid #eeeeee;
+    border-right: 0;
+    border-bottom: 0;
+}
+.grace-grid.grace-grid-bordered .grace-grid-title {
+    border: 1px solid #e8e8e8;
+    border-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.grace-grid.grace-grid-bordered .grace-grid-footer {
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+}
+
+
+
+/*~~~~~~~~~~~~~表格全选按钮样式~~~~~~~~~~~~~~~~~~*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+.grace-grid-checkbox {
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+    top: -0.09em;
+}
+.grace-grid-checkbox-wrapper:hover .grace-grid-checkbox-inner,
+.grace-grid-checkbox:hover .grace-grid-checkbox-inner,
+.grace-grid-checkbox-input:focus + .grace-grid-checkbox-inner {
+    border-color: #1890ff;
+}
+.grace-grid-checkbox-checked:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    border: 1px solid #1890ff;
+    content: '';
+    -webkit-animation: graceCheckboxEffect 0.36s ease-in-out;
+    animation: graceCheckboxEffect 0.36s ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    visibility: hidden;
+}
+.grace-grid-checkbox:hover:after,
+.grace-grid-checkbox-wrapper:hover .grace-grid-checkbox:after {
+    visibility: visible;
+}
+.grace-grid-checkbox-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.grace-grid-checkbox-inner:after {
+    -webkit-transform: rotate(45deg) scale(0);
+    -ms-transform: rotate(45deg) scale(0);
+    transform: rotate(45deg) scale(0);
+    position: absolute;
+    left: 4.57142857px;
+    top: 1.14285714px;
+    display: table;
+    width: 5.71428571px;
+    height: 9.14285714px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+}
+.grace-grid-checkbox-input {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.grace-grid-checkbox-indeterminate .grace-grid-checkbox-inner:after {
+    content: ' ';
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    position: absolute;
+    left: 2.42857143px;
+    top: 5.92857143px;
+    width: 9.14285714px;
+    height: 1.14285714px;
+}
+.grace-grid-checkbox-indeterminate.grace-grid-checkbox-disabled .grace-grid-checkbox-inner:after {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+.grace-grid-checkbox-indeterminate .grace-grid-checkbox-inner:after {
+    content: ' ';
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    position: absolute;
+    left: 2.42857143px;
+    top: 5.92857143px;
+    width: 9.14285714px;
+    height: 1.14285714px;
+}
+.grace-grid-checkbox-indeterminate.grace-grid-checkbox-disabled .grace-grid-checkbox-inner:after {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+.grace-grid-checkbox-checked .grace-grid-checkbox-inner:after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    position: absolute;
+    display: table;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.grace-grid-checkbox-checked .grace-grid-checkbox-inner,
+.grace-grid-checkbox-indeterminate .grace-grid-checkbox-inner {
+    background-color: #1890ff;
+    border-color: #1890ff;
+}
+.grace-grid-checkbox-disabled {
+    cursor: not-allowed;
+}
+.grace-grid-checkbox-disabled.grace-grid-checkbox-checked .grace-grid-checkbox-inner:after {
+    -webkit-animation-name: none;
+    animation-name: none;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+.grace-grid-checkbox-disabled .grace-grid-checkbox-input {
+    cursor: not-allowed;
+}
+.grace-grid-checkbox-disabled .grace-grid-checkbox-inner {
+    border-color: #d9d9d9 !important;
+    background-color: #f5f5f5;
+}
+.grace-grid-checkbox-disabled .grace-grid-checkbox-inner:after {
+    -webkit-animation-name: none;
+    animation-name: none;
+    border-color: #f5f5f5;
+}
+.grace-grid-checkbox-disabled + span {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+}
+.grace-grid-checkbox-wrapper {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: unset;
+    cursor: pointer;
+    display: inline-block;
+}
+.grace-grid-checkbox-wrapper + .grace-grid-checkbox-wrapper {
+    margin-left: 8px;
+}
+.grace-grid-checkbox-wrapper + span,
+.grace-grid-checkbox + span {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.grace-grid-checkbox-group {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+.grace-grid-checkbox-group-item {
+    display: inline-block;
+    margin-right: 8px;
+}
+.grace-grid-checkbox-group-item:last-child {
+    margin-right: 0;
+}
+.grace-grid-checkbox-group-item + .grace-grid-checkbox-group-item {
+    margin-left: 0;
+}
+
+/*~~~~~~~~~~~~~~~排序按钮相关~~~~~~~~~~~~~~~~~~~~*/
+.grace-grid-column-sorter {
+    position: relative;
+    margin-left: 2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: normal;
+}
+.grace-grid-column-sorter-up, .grace-grid-column-sorter-down {
+    line-height: 6px;
+    display: block;
+    width: 14px;
+    height: 6px;
+    cursor: pointer;
+}
+.grace-grid-ion-sorter-up,.grace-grid-ion-sorter-down{
+    position: relative;
+    height: 0;
+    width: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+.grace-grid-ion-sorter-up{
+    border-bottom: 6px solid #d5dae0;
+    top: -12px;
+}
+.grace-grid-ion-sorter-down{
+    border-top: 6px solid #d5dae0;
+    bottom: -11px;
+}
+.grace-grid-column-sorter-up.on .grace-grid-ion-sorter-up{
+    border-bottom: 6px solid #199bfc;
+}
+.grace-grid-column-sorter-down.on .grace-grid-ion-sorter-down{
+    border-top: 6px solid #199bfc;
+}
+.grace-grid-column-sorter-up:after {
+    top: -30px;
+}
+.grace-grid-column-sorter-down:after {
+    bottom: -30px;
+}
+.grace-grid-column-sorter-up:after, .grace-grid-column-sorter-down:after {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 20px;
+    left: 0;
+}
+
+/*~~~~~~~~~~~~展开按钮~~~~~~~~~~~~~~~~~~*/
+.grace-grid-row-expand-icon {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    //border: 1px solid #e8e8e8;
+    margin-right: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    //background: #fff;
+}
+
+/*~~~~~~~~~~~表格默认高度样式（特殊样式需要覆盖这里）~~~~~~~~~~~~~*/
+//.grace-grid-wrapper .grace-grid-th-back-color{
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//    width: 100%;
+//    height: 41px;
+//    background-color: #f7f7f7;
+//}
+.grace-grid.defaultUIStyle table > thead > tr > th{
+    padding: 0 8px;
+    height: 40px;
+}
+.grace-grid.defaultUIStyle table > tbody > tr > td{
+    padding: 0 8px;
+    height: 80px;
+}
+
+.grace-grid.defaultUIStyle table > thead > tr{
+    background-color: #f7f7f7;
+}
+.grace-grid.defaultUIStyle .grace-grid-scroll table > thead > tr > th{
+    padding-left: 17px;
+}
+.grace-grid.defaultUIStyle .grace-grid-scroll table > tbody > tr > td{
+    padding-left: 17px;
+}
+.grace-grid.defaultUIStyle table > tbody > tr:last-child td{
+    border-bottom: none;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th:first-child,
+.grace-grid.defaultUIStyle table > tbody > tr > td:first-child,
+.grace-grid.defaultUIStyle.grace-grid-fixed-header table > thead > tr > th:first-child,
+.grace-grid.defaultUIStyle.grace-grid-fixed-header table > tbody > tr > td:first-child{
+    padding-left: 30px;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th:last-child,
+.grace-grid.defaultUIStyle table > tbody > tr > td:last-child,
+.grace-grid.defaultUIStyle.grace-grid-fixed-header table > thead > tr > th:last-child,
+.grace-grid.defaultUIStyle.grace-grid-fixed-header table > tbody > tr > td:last-child{
+    padding-right: 40px;
+}
+
+/*~~~~~~~~~~列对齐方式~~~~~~~~~~~~~*/
+.grace-grid table > thead > tr > th,
+.grace-grid table > tbody > tr > td{
+    text-align: left;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th.textLeft,
+.grace-grid.defaultUIStyle table > tbody > tr > td.textLeft{
+    text-align: left;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th.textCenter,
+.grace-grid.defaultUIStyle table > tbody > tr > td.textCenter{
+    text-align: center;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th.textRight,
+.grace-grid.defaultUIStyle table > tbody > tr > td.textRight{
+    text-align: right;
+}
+
+.grace-grid.defaultUIStyle table > tbody > tr > td.has-sorter{
+    padding-right: 28px;
+}
+.grace-grid.defaultUIStyle table > thead > tr > th.has-expand-rows{
+    padding-left: 40px;
+}
+.grace-grid.defaultUIStyle table > tbody > tr > td.has-sorter:last-child{
+    padding-right: 58px;
+}
+
+/*~~~~~~~~~~列筛选样式~~~~~~~~~~~~~*/
+.grace-grid table > thead > tr > th .grace-grid-filter-arrow{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+.grace-grid table > thead > tr > th .grace-grid-filter-arrow.arrow-up{
+    background: url(../../img/widget/grid-filter-arrow.png) no-repeat 0 -11px;
+}
+.grace-grid table > thead > tr > th .grace-grid-filter-arrow.arrow-down{
+    background: url(../../img/widget/grid-filter-arrow.png) no-repeat 0 3px;
+}
+.grace-dropdown {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    z-index: 1070;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+.grace-dropdown-hidden {
+    display: none;
+}
+.grace-dropdown-menu {
+    outline: none;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 2px 0 0 0;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px #ccc;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+}
+.grace-dropdown-menu > li {
+    margin: 0;
+    padding: 0;
+}
+.grace-dropdown-menu:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    background: rgba(255, 255, 255, 0.01);
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item {
+    position: relative;
+    display: block;
+    padding: 7px 20px;
+    clear: both;
+    font-size: 12px;
+    font-weight: normal;
+    color: #666666;
+    white-space: nowrap;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item:hover,
+.grace-dropdown-menu > .grace-dropdown-menu-item-active,
+.grace-dropdown-menu > .grace-dropdown-menu-item-selected {
+    background-color: #ebfaff;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item-selected {
+    position: relative;
+    color: #0e88ee;
+}
+//.grace-dropdown-menu > .grace-dropdown-menu-item-selected:after {
+//    //todo 选中样式
+//    content: '\e613';
+//    font-weight: bold;
+//    position: absolute;
+//    top: 6px;
+//    right: 16px;
+//    color: #3CB8F0;
+//}
+.grace-dropdown-menu > .grace-dropdown-menu-item-disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item-disabled:hover {
+    color: #ccc;
+    background-color: #fff;
+    cursor: not-allowed;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.grace-dropdown-menu > .grace-dropdown-menu-item-divider {
+    height: 1px;
+    margin: 1px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    line-height: 0;
+}
+.grace-dropdown-slide-up-enter,
+.grace-dropdown-slide-up-appear {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    display: block !important;
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.grace-dropdown-slide-up-leave {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    display: block !important;
+    opacity: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-bottomLeft,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-bottomLeft,
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-bottomCenter,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-bottomCenter,
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-bottomRight,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-bottomRight {
+    -webkit-animation-name: rcDropdownSlideUpIn;
+    animation-name: rcDropdownSlideUpIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-topLeft,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-topLeft,
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-topCenter,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-topCenter,
+.grace-dropdown-slide-up-enter.grace-dropdown-slide-up-enter-active.grace-dropdown-placement-topRight,
+.grace-dropdown-slide-up-appear.grace-dropdown-slide-up-appear-active.grace-dropdown-placement-topRight {
+    -webkit-animation-name: rcDropdownSlideDownIn;
+    animation-name: rcDropdownSlideDownIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-bottomLeft,
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-bottomCenter,
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-bottomRight {
+    -webkit-animation-name: rcDropdownSlideUpOut;
+    animation-name: rcDropdownSlideUpOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-topLeft,
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-topCenter,
+.grace-dropdown-slide-up-leave.grace-dropdown-slide-up-leave-active.grace-dropdown-placement-topRight {
+    -webkit-animation-name: rcDropdownSlideDownOut;
+    animation-name: rcDropdownSlideDownOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+@-webkit-keyframes rcDropdownSlideUpIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes rcDropdownSlideUpIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes rcDropdownSlideUpOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+@keyframes rcDropdownSlideUpOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+@-webkit-keyframes rcDropdownSlideDownIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@keyframes rcDropdownSlideDownIn {
+    0% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+@-webkit-keyframes rcDropdownSlideDownOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+@keyframes rcDropdownSlideDownOut {
+    0% {
+        opacity: 1;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+
+/*~~~~~~~~~~列筛选面板样式~~~~~~~~~~~~~*/
+.grace-grid-dropdown {
+    min-width: 96px;
+    margin-left: -8px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.grace-grid-dropdown .grace-dropdown-menu {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px 4px 0 0;
+}
+.grace-grid-dropdown .grace-dropdown-menu-without-submenu {
+    max-height: 400px;
+    overflow-x: hidden;
+}
+.grace-grid-dropdown .grace-dropdown-menu-item > label + span {
+    padding-right: 0;
+}
+.grace-grid-dropdown .grace-dropdown-menu-sub {
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.grace-grid-dropdown .grace-dropdown-menu .grace-dropdown-submenu-contain-selected .grace-dropdown-menu-submenu-title:after {
+    color: #1890ff;
+    font-weight: bold;
+    text-shadow: 0 0 2px #bae7ff;
+}
+.grace-grid-dropdown .grace-dropdown-menu-item {
+    overflow: hidden;
+}
+.grace-grid-dropdown > .grace-dropdown-menu > .grace-dropdown-menu-item:last-child,
+.grace-grid-dropdown > .grace-dropdown-menu > .grace-dropdown-menu-submenu:last-child .grace-dropdown-menu-submenu-title {
+    border-radius: 0;
+}
+.grace-grid-dropdown-btns {
+    overflow: hidden;
+    padding: 7px 8px;
+    border-top: 1px solid #e8e8e8;
+}
+.grace-grid-dropdown-link {
+    color: #1890ff;
+}
+.grace-grid-dropdown-link:hover {
+    color: #40a9ff;
+}
+.grace-grid-dropdown-link:active {
+    color: #096dd9;
+}
+.grace-grid-dropdown-link.confirm {
+    float: left;
+}
+.grace-grid-dropdown-link.clear {
+    float: right;
+}

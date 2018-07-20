@@ -1,0 +1,138 @@
+@charset "UTF-8";
+$axis-labels-fontSize: 12px;
+$tooltip-fontSize: 12px;
+$legend-fontSize: 14px;
+.msz-chart{
+  background-color: #ffffff;
+}
+
+.msz-chart .trend-container{
+  height: 4rem;
+  margin: 0 .4rem;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.msz-chart .highcharts-container .highcharts-axis-labels.highcharts-xaxis-labels text{
+  font-size: $axis-labels-fontSize!important;
+}
+
+[data-dpr="2"] .msz-chart .highcharts-container .highcharts-axis-labels.highcharts-xaxis-labels text{
+  font-size: $axis-labels-fontSize*2!important;
+}
+[data-dpr="3"] .msz-chart .highcharts-container .highcharts-axis-labels.highcharts-xaxis-labels text{
+  font-size: $axis-labels-fontSize*3!important;
+}
+
+
+.msz-chart .highcharts-container .highcharts-tooltip{
+  border-radius: .066667rem;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span{
+  font-size: $tooltip-fontSize!important;
+}
+[data-dpr="2"] .msz-chart .highcharts-container .highcharts-tooltip>span{
+  font-size: $tooltip-fontSize*2!important;
+}
+[data-dpr="3"] .msz-chart .highcharts-container .highcharts-tooltip>span{
+  font-size: $tooltip-fontSize*3!important;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p{
+  line-height: $tooltip-fontSize!important;
+  margin:  .066667rem .133333rem;
+  text-align: right;
+  float: right;
+  min-width: 4rem;
+  width: calc(100% - .266667rem);
+}
+[data-dpr="2"] .msz-chart .highcharts-container .highcharts-tooltip>span p{
+  line-height: $tooltip-fontSize*2!important;
+}
+[data-dpr="3"] .msz-chart .highcharts-container .highcharts-tooltip>span p{
+  line-height: $tooltip-fontSize*3!important;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p.p-mw{
+  min-width: 5rem;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p.p-lw{
+  min-width: 6rem;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p:first-child{
+  float: left;
+  text-align: left;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p>span.left-text{
+  margin-right: 0.266667rem;
+  text-align: left;
+  float: left;
+}
+.msz-chart .highcharts-container .highcharts-tooltip>span p>span.right-text{
+  float: right;
+  display: inline-block;
+}
+.msz-chart .legend-container,
+.msz-chart #point-info-container{
+  padding-top: .133333rem;
+  padding-bottom: .133333rem;
+  text-align: center;
+}
+.msz-chart .legend-container .custom-legend{
+  margin: .133333rem .4rem;
+  text-align: center;
+  display: inline-block;
+}
+.msz-chart .legend-container .custom-legend.date-picker{
+  margin: .133333rem auto;
+  text-align: center;
+  //display: block;
+}
+.msz-chart .legend-container .custom-legend .legend-info{
+  font-size: $legend-fontSize;
+}
+[data-dpr="2"] .msz-chart .legend-container .custom-legend .legend-info{
+  font-size: $legend-fontSize*2;
+}
+[data-dpr="3"] .msz-chart .legend-container .custom-legend .legend-info{
+  font-size: $legend-fontSize*3;
+}
+.msz-chart .legend-container .custom-legend.date-picker .legend-info{
+  display: inline-block;
+  height: .853333rem;
+  line-height: .586667rem;
+  box-sizing: border-box;
+  background-color: #dee3e7;
+  padding: .133333rem .266667rem;
+  border-radius: .426667rem;
+}
+.msz-chart .legend-container .custom-legend.date-picker .legend-info .down-arrow{
+  display: inline-block;
+  height: .213333rem;
+  width: .32rem;
+  margin-left: 0.213333rem;
+  margin-bottom: .026667rem;
+  background-size: .32rem .213333rem;
+  background-image: url('../../img/down-arrow.png');
+}
+
+.msz-chart .legend-container .custom-legend span.point-span{
+  display: inline-block;
+  margin-right: .266667rem;
+  margin-bottom: .046667rem;
+  width: .133333rem;
+  height: .133333rem;
+  border-radius: .066667rem;
+}
+.msz-chart .point-info-container{
+  //height: 1rem;
+}
+.msz-chart .point-info-container .point-info{
+  margin: .133333rem auto;
+  text-align: left;
+  color: #999999;
+}
+.msz-chart .point-info-container .point-info .index-name{
+  margin-left: 1rem;
+  margin-right: .133333rem;
+}

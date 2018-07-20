@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "../mixin";
+/**dpr-1 font-size**/
+$fontSize-number: 12px;
+$fontSize-title: 14px;
+$fontSize-main: 18px;
+$fontSize-label: 9px;
+
+.msz-summary{
+	background:#fff;
+}
+.msz-summary div{
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 0.4rem;
+    line-height: 0.666667rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	&>p>span{
+		display:block;
+	}
+	&>p{
+	    width: 40%;
+	}
+	&>ul{
+	    width: 50%;
+	}
+	.summary-title{
+		@include font-dpr($fontSize-title);
+		color:#999;
+	}
+	.summary-main{
+		@include font-dpr($fontSize-main);
+		color:#333;
+	}
+	li{
+		clear:both;
+	}
+	.summary-number{    
+		@include font-dpr($fontSize-number);
+	    color: #333;
+	    float: left;
+	    width: 40%;
+	    text-align: right;
+	}
+	.summary-label{
+	    background: #eee;
+	    border-radius: 0.666667rem;
+	    border: 1px solid #eeeeee;
+		@include font-dpr($fontSize-label);
+	    padding:0 0.066667rem;
+	    color: #666;
+	    margin-left: 0.266667rem;
+	}
+	.summary-detail-btn{
+		width:0.213333rem;
+		background:url(../../img/right-arrow1.png) center center no-repeat;
+        background-size: 100% auto;
+	    height: 1.333333rem;
+	}
+}

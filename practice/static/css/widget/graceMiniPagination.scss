@@ -1,0 +1,202 @@
+$small-size : 1;
+$middle-size : 1.1;
+$large-size : 1.2;
+
+@mixin outputSize($size:1){
+    min-width: 26px * $size;
+    height: 26px * $size;
+    line-height: 26px * $size;
+    font-size: 13px * $size;
+}
+
+@mixin outputBtnSize($size ,$dirction){
+    position: absolute;
+    display: inline-block;
+    border-#{$dirction}: solid 5px*$size #808080;
+    border-bottom: solid 5px*$size transparent;
+    border-top: solid 5px*$size transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.grace-miniPagination-wrapper{
+    // border: 1px solid #cccccc;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+}
+
+.grace-miniPagination-content-wrapper{
+    background: inherit;
+    color: #808080;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &>div {
+        float: left;
+    }
+
+    .grace-miniPagination-btn{   
+        text-align: center;
+        cursor: pointer;
+        color: #616367;
+        position: relative;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &.miniPagination-previous-btn:hover span{
+            border-right-color: #6190e8 !important;
+            background: transparent;
+            -webkit-transition: border .3s ease;
+            transition: border .3s ease;
+        }
+        &.miniPagination-next-btn:hover span{
+            border-left-color: #6190e8 !important;
+            background: transparent;
+            -webkit-transition: border .3s ease;
+            transition: border .3s ease;
+        }
+        
+        &.miniPagination-previous-btn-disable{
+            cursor: not-allowed;
+            &:hover span{
+                border-right-color: #616367 !important;
+            }
+        }
+        &.miniPagination-next-btn-disable{
+            cursor: not-allowed;
+            &:hover span{
+                border-left-color: #616367 !important;
+            }
+        }
+    }
+
+    .pageNum-area{
+        margin-top: 1px;
+        &>span{
+            display: inline-block;
+            cursor: default;
+        }
+        .pageNum-area-separator{
+            min-width:5px;
+            margin:0 5px;
+        }
+
+        .pageNum-area-currPage{
+            padding:2px 5px;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #ecf1f7;
+            text-align: center;
+            width: 30px;
+            color: #808080;
+            &:focus{
+                border: 1px solid #aec2e7;
+                box-shadow: 0 0 5px #6a98ee;
+            }
+        }
+        .pageNum-area-currPage-common,.pageNum-area-totalPage{
+            min-width: 15px;
+        }
+    }
+
+    &.grace-miniPagination-s{
+        .grace-miniPagination-btn{
+            @include outputSize($small-size);
+
+            
+            &.miniPagination-previous-btn span{
+                @include outputBtnSize($small-size,right)
+            }
+
+            &.miniPagination-next-btn span{
+                @include outputBtnSize($small-size,left)
+            }
+        }
+        .pageNum-area{
+            @include outputSize($small-size);
+            margin-top: -1px;
+        }
+    }
+
+    &.grace-miniPagination-m{
+        .grace-miniPagination-btn{
+            @include outputSize($middle-size);
+
+            &.miniPagination-previous-btn span{
+                @include outputBtnSize($middle-size,right)
+            }
+
+            &.miniPagination-next-btn span{
+                @include outputBtnSize($middle-size,left)
+            }
+
+        }
+        .pageNum-area{
+            @include outputSize($middle-size);
+        }
+    }
+
+    &.grace-miniPagination-l{
+        .grace-miniPagination-btn{
+            @include outputSize($large-size);
+
+            &.miniPagination-previous-btn span{
+                @include outputBtnSize($large-size,right)
+            }
+
+            &.miniPagination-next-btn span{
+                @include outputBtnSize($large-size,left)
+            }
+        }
+        .pageNum-area{
+            @include outputSize($large-size);
+        }
+    }
+
+    &.grace-miniPagination-left{
+        left: 5%
+    }
+    &.grace-miniPagination-middle{
+        left: 50%;
+        transform: translate(-50%,-50%)
+    }
+    &.grace-miniPagination-right{
+        right: 5%;
+    }
+}
+
+.grace-miniPagination-content-wrapper.grace-miniPagination-morePage{
+    .pageNum-area{
+        display: none;
+    }
+
+    .grace-miniPagination-btn{
+        border: 1px solid #9b9ba5;
+        border-radius:15%; 
+        
+        &:first-of-type{
+            margin-right:12px; 
+        }  
+
+        &:hover{
+            border-color: #6190e8;
+            background: transparent;
+            -webkit-transition: border-color .3s ease;
+            transition: border-color .3s ease;
+        }
+
+        &.miniPagination-previous-btn-disable,
+        &.miniPagination-next-btn-disable{
+            &:hover{
+                border-color: #9b9ba5;
+            }
+        }
+    }
+       
+}

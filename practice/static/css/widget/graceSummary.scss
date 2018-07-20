@@ -1,0 +1,190 @@
+.grace-summary{
+    min-height: 120px;
+    .no-data-comtainer{
+        //空数据提示
+        text-align: center;
+        line-height: 120px;
+    }
+    .summary-item{
+        .summary-list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            //justify-content:space-between;
+            .list-li{
+                position: relative;
+                display: inline-block;
+                box-sizing: border-box;
+                background:url(../../img/widget/summary-raise.png) no-repeat;
+                background-size: cover;
+                height: auto;
+                min-height: 131px;
+                //width: 23.37%;
+                margin-right: 2.16%;
+                padding: 13px 30px;
+                margin-bottom: 20px;
+                &.more-four-li{
+                    padding: 13px 20px;
+                    margin-right: 1.25%;
+                    .li-trend{
+                        right: 10%;
+                    }
+                    .li-radio-checkbox{
+                        right: 10px;
+                    }
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.list-radio{
+                    border: 10px solid #ffffff;
+                    cursor:pointer;
+                    &.select{
+                        box-shadow: #dddddd 0 0 10px;
+                    }
+                }
+                &.raise{
+                    background:url(../../img/widget/summary-raise.png) no-repeat;
+                    background-size: cover;
+                }
+                &.decline{
+                    background:url(../../img/widget/summary-decline.png) no-repeat;
+                    background-size: cover;
+                    .li-detail li span{
+                        color: #7e2236;
+                    }
+                }
+                &.no-margin-right{
+                    margin-right: 0;
+                }
+                .multiSelect{
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    width: auto;
+                }
+                .li-title{
+                    color: #f2f2f2;
+                    overflow: hidden;
+                    .icon-help{
+                        display: inline-block;
+                        padding: 0;
+                        height: 16px;
+                        width: 16px;
+                        background: url(../../img/widget/tips.png) 0 0 no-repeat;
+                        cursor: pointer;
+                        margin-left: 5px;
+                    }
+                }
+                .li-radio-checkbox{
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    input[type="checkbox"] {
+                        display:none;
+                    }
+                    input[type="checkbox"] + label {
+                        color:#ffffff;
+                    }
+                    input[type="checkbox"] + label span {
+                        display:inline-block;
+                        width:16px;
+                        height:16px;
+                        margin:-2px 10px 0 0;
+                        vertical-align:middle;
+                        background-color: #ffffff;
+                        cursor:pointer;
+                    }
+                    input[type="checkbox"]:checked + label span {
+                        background-image: url("../../img/widget/summary-checked.png");
+                        background-size: 13px 11px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    input[type="radio"] {
+                        display:none;
+                    }
+                    input[type="radio"] + label {
+                        color:#ffffff;
+                    }
+                    input[type="radio"] + label span {
+                        display:inline-block;
+                        width:20px;
+                        height:20px;
+                        margin:-2px 10px 0 0;
+                        vertical-align:middle;
+                        cursor:pointer;
+                    }
+                    input[type="radio"]:checked + label span {
+                        background:url(../../img/widget/summary-radio.png) 0 0 no-repeat;
+                    }
+                }
+                .li-body{
+                    color: #ffffff;
+                    margin-top: 10px;
+                    .body-value,.money-sign,.percent-sign{
+                        font-size: 22px;
+                    }
+                }
+                .li-trend{
+                    position: absolute;
+                    color: #ffffff;
+                    top: 85px;
+                    right: 40px;
+                    .arrow{
+                        display: inline-block;
+                        margin-left: 5px;
+                    }
+                    .arrow-raise:after{
+                        content: " ";
+                        position: absolute;
+                        width: 8px;
+                        height: 14px;
+                        top: 2px;
+                        right: -8px;
+                        background-image: url(../../img/widget/summary-arrow-up.png);
+                        background-repeat: no-repeat;
+                        background-size: 8px 10px;
+                        background-position: center;
+                    }
+                    .arrow-decline:after{
+                        content: " ";
+                        position: absolute;
+                        width: 8px;
+                        height: 10px;
+                        top: 2px;
+                        right: -8px;
+                        background-image: url(../../img/widget/summary-arrow-down.png);
+                        background-repeat: no-repeat;
+                        background-size: 8px 10px;
+                        background-position: center;
+                    }
+                }
+                .li-detail{
+                    height: auto;
+                    width: 100%;
+                    margin-top: 19px;
+                    margin-bottom: 17px;
+                    ul{
+                        padding: 0;
+                        margin-top: 10px;
+                        li{
+                            display: -webkit-flex; /* Safari */
+                            display: flex;
+                            justify-content:space-between;
+                            height: auto;
+                            line-height: 16px;
+                            margin-top: 5px;
+                            clear: both;
+                            span{
+                                color: #0f765e;
+                                min-width: 52px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

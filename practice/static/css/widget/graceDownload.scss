@@ -1,0 +1,41 @@
+
+.grace-down-load{
+    cursor: pointer;
+    line-height: 20px;
+    &:hover{
+        .download-data-img{
+            background: url(../../img/download.png) 1px 2px no-repeat;
+        }
+        .download-data{
+            color: #ff3333;
+        }
+    }
+    .download-data-img{
+        float: right;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../../img/download.png) 1px -63px no-repeat;
+    }
+    .download-data{
+        font-size: 14px;
+        color: #2196f3;
+        float: right;
+    }
+}
+//.grace-undown-load{
+//    &:hover{
+//        .download-data-img{
+//            background: url(../../img/download.png) 1px -44px no-repeat;
+//        }
+//        .download-data{
+//            color: #c9c9c9;
+//        }
+//    }
+//    .download-data-img{
+//        background: url(../../img/download.png) 1px -44px no-repeat;
+//    }
+//    .download-data{
+//        color: #c9c9c9;
+//    }
+//}

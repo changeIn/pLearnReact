@@ -1,0 +1,158 @@
+/*类目样式*/
+.grace-btn-group.cata-dropdown {
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    >button {
+        border: 1px solid #d5e0f2;
+        border-radius: 2px;
+        height: 30px;
+        padding-left: 10px;
+        outline: none;
+        color: #4a5a72;
+    }
+    >.dropdown-menu {
+        left: 10px;
+    }
+    .dropdown-toggle {
+        min-width: 127px;
+        text-align: left;
+        outline: none;
+        border-radius: 1px;
+        background-color: #fff;
+        height: 36px;
+        padding-right: 30px;
+        position: relative;
+        cursor: pointer;
+        .select-res-name {
+            display: inline-block;
+            width: 88px;
+        }
+        .down-icon {
+            //transition: .2s all ease;
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+            top: 12px;
+            right: 12px;
+            transform-origin: center center;
+            transform: rotate(135deg);
+        }
+    }
+
+    .grace-cata-dropdown-body {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background: #fff;
+        border: 1px solid #d5e0f2;
+        border-radius: 2px;
+        i {
+            display: inline-block;
+            border-top: 1px solid;
+            border-right: 1px solid;
+            width: 6px;
+            height: 6px;
+            transform: rotate(45deg);
+            top: 15px;
+            right: 10px;
+            position: absolute;
+        }
+        .dropdown-menu>li{
+            position: relative;
+            >a{
+                display: block;
+                padding: 10px;
+                color: #666
+            }
+
+        }
+        .dropdown-menu .gray-bg{
+            background-color: #f3f6f8;
+        }
+        .ul-wrap{
+            display: flex;
+            max-height: 260px;
+            min-height: 160px;
+        }
+        .border-out{
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #fff;
+            border-right: 1px solid #d5e0f2;
+            outline: none;
+        }
+        .border-out.single-dropdown{
+            width: 100%;
+        }
+        .parent-nano-warp {
+            position: absolute;
+            left: 0;
+            top: 38px;
+            height: 330px;
+        }
+        .dropdown-menu {
+            margin: 0;
+            float: left;
+            > li > a{
+                white-space: nowrap;
+            }
+        }
+        li.selected{
+            a {
+                color:#2576df;
+            }
+        }
+        .hide-all {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            display: none;
+        }
+        .show-all {
+            display: block;
+            border-bottom: 1px solid #d5e0f2;
+        }
+        .show-all:hover {
+            background-color: #f3f6f8;
+        }
+        .selected-all {
+            color: #2576df;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            border-bottom: 1px solid #d5e0f2;
+        }
+        .ul-wrap {
+            ul:last-child {
+                border-right: none;
+            }
+        }
+        .hide-i {
+            display: none;
+        }
+        .show-i {
+            display: block;
+        }
+    }
+    .grace-cata-dropdown-body.align-right{
+        right: 0;
+    }
+}
+
+.grace-dropdown-open {
+    .grace-btn-group.cata-dropdown .grace-cata-dropdown-body {
+        display: block;
+        min-width: 222px;
+    }
+
+    //.grace-btn-group .dropdown-toggle .down-icon {
+    //    top: 15px;
+    //    transform: rotate(-45deg);
+    //}
+}

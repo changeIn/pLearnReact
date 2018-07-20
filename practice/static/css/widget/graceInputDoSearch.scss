@@ -1,0 +1,69 @@
+
+.grace-input-do-search{
+    display: inline-block;
+    .search-container{
+        position: relative;
+        background-color: #ffffff;
+        float: right;
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            color: #4a5a72;
+        }
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #4a5a72;
+        }
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #4a5a72;
+        }
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #4a5a72;
+        }
+        .border-out{
+            background: #fff;
+            color: #333333;
+            border: 1px solid #d5e0f2;
+            border-radius: 3px;
+            outline: none;
+        }
+        .search-input{
+            height: 32px;
+            line-height: 32px;
+            text-indent: 15px;
+            width: 195px;
+            padding-right: 60px;
+            border-radius: 3px;
+        }
+        .searh-icon-clear {
+            float: right;
+            background: url(../../img/widget/del1.png) 0 2px no-repeat;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 35px;
+            top: 6px;
+            cursor: pointer;
+            display: none;      //暂时隐藏
+            &.hide{
+                display: none;
+            }
+        }
+        .searh-icon-done {
+            float: right;
+            background: url(../../img/widget/serach.png) 9px 8px no-repeat;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            cursor: pointer;
+            &:before{
+                content: "";
+                position: relative;
+                height: 22px;
+                border-left: 1px solid #e1e1e1;
+                display: inline-block;
+                margin-right: 20px;
+                top: 5px;
+            }
+        }
+    }
+}

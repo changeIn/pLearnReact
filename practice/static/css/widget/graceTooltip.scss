@@ -1,0 +1,225 @@
+
+.grace-tooltip {
+    position: absolute;
+    z-index: 1060;
+    display: inline-block;
+    visibility: visible;
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0;
+
+    .grace-tooltip-arrow{
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid
+    }
+    .grace-tooltip-inner{
+        max-width: 450px;
+        padding: 8px 10px;
+        text-align: left;
+        text-decoration: none;
+        background-color: rgba(64,64,64,.85);
+        border-radius: 4px;
+        //color: #fff;
+        //box-shadow: 0 1px 6px rgba(0,0,0,.2);
+        background-color: #fff;
+        box-shadow: 0 0 3px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        color: #333;
+    }
+
+}
+.grace-tooltip-show {
+    opacity: 1;
+}
+.grace-tooltip-hidden {
+    opacity: 0;
+}
+.grace-tooltip-animation-show {
+    -webkit-animation-name: fadeIn;         /*动画名称*/
+    -webkit-animation-duration: .2s;         /*动画持续时间*/
+    -webkit-animation-iteration-count: 1;   /*动画次数*/
+    -webkit-animation-delay: 0s;            /*延迟时间*/
+    opacity: 1;
+}
+.grace-tooltip-animation-hidden {
+    -webkit-animation-name: fadeOut;         /*动画名称*/
+    -webkit-animation-duration: .2s;         /*动画持续时间*/
+    -webkit-animation-iteration-count: 1;   /*动画次数*/
+    -webkit-animation-delay: 0s;            /*延迟时间*/
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1; /*初始状态 透明度为0*/
+    }
+    100% {
+        opacity: 0; /*结尾状态 透明度为1*/
+    }
+}
+
+.grace-tooltip-placement-top,
+.grace-tooltip-placement-topLeft,
+.grace-tooltip-placement-topRight {
+    padding: 5px 0 8px
+}
+
+.grace-tooltip-placement-right,
+.grace-tooltip-placement-rightBottom,
+.grace-tooltip-placement-rightTop {
+    padding: 0 5px 0 8px
+}
+
+.grace-tooltip-placement-bottom,
+.grace-tooltip-placement-bottomLeft,
+.grace-tooltip-placement-bottomRight {
+    padding: 8px 0 5px
+}
+
+.grace-tooltip-placement-left,
+.grace-tooltip-placement-leftBottom,
+.grace-tooltip-placement-leftTop {
+    padding: 0 8px 0 5px
+}
+.grace-tooltip .grace-tooltip-arrow:after{
+    position: absolute;
+    display: block;
+    border: 10px solid transparent;
+    content: " ";
+}
+
+.grace-tooltip-placement-top .grace-tooltip-arrow,
+.grace-tooltip-placement-topLeft .grace-tooltip-arrow,
+.grace-tooltip-placement-topRight .grace-tooltip-arrow {
+    bottom: 3px;
+    border-width: 5px 5px 0;
+    border-top-color: rgba(150, 150, 150, 0.1)
+    //border-top-color: rgba(64,64,64,.85)
+}
+.grace-tooltip-placement-top .grace-tooltip-arrow:after,
+.grace-tooltip-placement-topLeft .grace-tooltip-arrow:after,
+.grace-tooltip-placement-topRight .grace-tooltip-arrow:after{
+    bottom: 1px;
+    margin-left: -10px;
+    content: " ";
+    left: 50%;
+    border-bottom-width: 0;
+    border-top-color: #fff;
+}
+.grace-tooltip-placement-top .grace-tooltip-arrow {
+    left: 50%;
+    margin-left: -5px
+}
+
+.grace-tooltip-placement-topLeft .grace-tooltip-arrow {
+    left: 16px
+}
+
+.grace-tooltip-placement-topRight .grace-tooltip-arrow {
+    right: 16px
+}
+
+.grace-tooltip-placement-right .grace-tooltip-arrow,
+.grace-tooltip-placement-rightBottom .grace-tooltip-arrow,
+.grace-tooltip-placement-rightTop .grace-tooltip-arrow {
+    left: 3px;
+    border-width: 5px 5px 5px 0;
+    border-right-color: rgba(150, 150, 150, 0.1)
+    //border-right-color: rgba(64,64,64,.85)
+}
+.grace-tooltip-placement-right .grace-tooltip-arrow:after,
+.grace-tooltip-placement-rightBottom .grace-tooltip-arrow:after,
+.grace-tooltip-placement-rightTop .grace-tooltip-arrow:after{
+    left: 1px;
+    margin-top: -10px;
+    content: " ";
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #fff;
+}
+.grace-tooltip-placement-right .grace-tooltip-arrow {
+    top: 50%;
+    margin-top: -5px
+}
+
+.grace-tooltip-placement-rightTop .grace-tooltip-arrow {
+    top: 8px
+}
+
+.grace-tooltip-placement-rightBottom .grace-tooltip-arrow {
+    bottom: 8px
+}
+
+.grace-tooltip-placement-left .grace-tooltip-arrow,
+.grace-tooltip-placement-leftBottom .grace-tooltip-arrow,
+.grace-tooltip-placement-leftTop .grace-tooltip-arrow {
+    right: 3px;
+    border-width: 5px 0 5px 5px;
+    border-left-color: rgba(150, 150, 150, 0.1)
+    //border-left-color: rgba(64,64,64,.85)
+}
+.grace-tooltip-placement-left .grace-tooltip-arrow:after,
+.grace-tooltip-placement-leftBottom .grace-tooltip-arrow:after,
+.grace-tooltip-placement-leftTop .grace-tooltip-arrow:after{
+    right: 1px;
+    margin-top: -10px;
+    content: " ";
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #fff;
+}
+.grace-tooltip-placement-left .grace-tooltip-arrow {
+    top: 50%;
+    margin-top: -5px
+}
+
+.grace-tooltip-placement-leftTop .grace-tooltip-arrow {
+    top: 8px
+}
+
+.grace-tooltip-placement-leftBottom .grace-tooltip-arrow {
+    bottom: 8px
+}
+
+.grace-tooltip-placement-bottom .grace-tooltip-arrow,
+.grace-tooltip-placement-bottomLeft .grace-tooltip-arrow,
+.grace-tooltip-placement-bottomRight .grace-tooltip-arrow {
+    top: 3px;
+    border-width: 0 5px 5px;
+    border-bottom-color: rgba(150, 150, 150, 0.1)
+    //border-bottom-color: rgba(64,64,64,.85)
+}
+.grace-tooltip-placement-bottom .grace-tooltip-arrow:after,
+.grace-tooltip-placement-bottomLeft .grace-tooltip-arrow:after,
+.grace-tooltip-placement-bottomRight .grace-tooltip-arrow:after{
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    left: 50%;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+.grace-tooltip-placement-bottom .grace-tooltip-arrow {
+    left: 50%;
+    margin-left: -5px
+}
+
+.grace-tooltip-placement-bottomLeft .grace-tooltip-arrow {
+    left: 16px
+}
+
+.grace-tooltip-placement-bottomRight .grace-tooltip-arrow {
+    right: 16px
+}

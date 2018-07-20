@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import '../mixin';
+$fontSize-category:14px;
+.msz-category {
+  background-color: #f5f7f9;
+  padding: .266667rem .4rem;
+  -webkit-overflow-scrolling : touch;
+  span.category-value {
+    display: block;
+    background-color: #dee3e7;
+    line-height: .8rem;
+    text-align: center;
+    border-radius: .266667rem;
+    .category-text{
+      width: 70%;
+      height: .533333rem;
+      line-height: .4666667rem;
+      display: inline-block;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  span.category-value:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAAJ1BMVEVMaXFmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmabbiiOAAAADHRSTlMAlwEDpbIG+5mYngXJ6IrHAAAAeklEQVQY02NgIBFwVhjA2cztExjYzzjD+SZnChg4zhyBKWD2OdMAIpzh0iApK5gCoMxiIMUkA1VgcuagAohWPHNkA0RaCCwOVBAGpFKh0iAFRxMY2GKg0lAFCGmwgjSENFhBKJI0SMEZJGmwAmRpkAIhFF8zCSpgDw4Ae7UrIwZcw9wAAAAASUVORK5CYII=);
+    content: " ";
+    width: .32rem;
+    height: .213333rem;
+    background-size: .32rem .213333rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 0.466667rem;
+  }
+  .modal-list {
+    padding: 0.5333rem;
+    position: relative;
+    .second-category-wrapper {
+      position: relative;
+      padding: 0;
+      float: left;
+      width: 50%;
+      text-align: center;
+      height: 2.8rem;
+      overflow-y: auto;
+    }
+    .single-second-categroy-wrapper{
+      width: 100%;
+      .single-second-categroy{
+        ul>li{
+          text-align: center;
+        }
+      }
+    }
+    .third-category-wrapper {
+      position: relative;
+      padding: 0;
+      float: right;
+      width: 50%;
+      text-align: center;
+      height: 2.8rem;
+      overflow-y: auto;
+    }
+
+  }
+  div.second-category,
+  div.third-category {
+    transition: transform 50ms  ease-in-out;
+    box-sizing: border-box;
+    //height: 2.8rem;
+    //overflow-y: auto;
+    li {
+      padding-left:.8rem;
+      line-height: .933333rem;
+      height: .933333rem;
+      width: 90%;
+      @include font-dpr($fontSize-category);
+      color: #adadad;
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    li.active {
+      color: #333333;
+    }
+  }
+}
+.modal .arrow-hook-second,
+.modal .arrow-hook-third {
+  position: absolute;
+  display: inline-block;
+  width: .12rem;
+  height: .2rem;
+  background-image: url('../../img/date_arrow.png');
+  background-repeat: no-repeat;
+  background-size: .12rem .2rem;
+  padding: 0;
+  top: 2.844444rem;
+  left: 1.2rem;
+  z-index: 99;
+}
+.modal .arrow-hook-third{
+  left: 5.8rem;
+}
+
+.modal .single-arrow-hook-second{
+  left: 4rem;
+}

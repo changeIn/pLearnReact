@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@import '../mixin';
+$grid-th-fontSize: 12px;
+$grid-td-fontSize: 14px;
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, p, blockquote, th, td{
+  margin: 0;
+  padding: 0;
+}
+table{
+  border-spacing: 0;
+}
+.fl{
+  float: left;
+}
+
+#root{
+  width: 100%;
+}
+.common-grid *{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.common-grid .grid-content .app-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+  z-index: 999;
+}
+.common-grid .grid-content .app-mask img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.026667rem;
+  margin-left: -0.533333rem;
+}
+.common-grid .grid-content .grid-wrapper .no-data{
+  min-height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  @include font-dpr($grid-th-fontSize);
+}
+.common-grid .grid-content .grid-wrapper .grid-scroller{
+  position: relative;
+  width: 100%;
+}
+.common-grid .grid-content header .normal-header table.grid-header{
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.common-grid .grid-content header .normal-header table.grid-header tr th{
+  padding: 0 .133333rem;
+  overflow: hidden;
+  color: #ababab;
+  @include font-dpr($grid-th-fontSize);
+}
+.common-grid .grid-content .grid-wrapper .grid-scroller section .normal-body table.grid-body{
+  width: 100%;
+  background-color: #ffffff;
+}
+.common-grid .grid-content .grid-wrapper .grid-scroller section .normal-body table.grid-body tr{
+  vertical-align: middle;
+  background-color: #ffffff;
+}
+.common-grid .grid-content .grid-wrapper .grid-scroller section .normal-body table.grid-body tr td{
+  padding: 0 .133333rem;
+  overflow: hidden;
+}
+.common-grid .grid-wrapper .normal-body .cell-content{
+  height: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.common-grid .grid-wrapper .normal-body .cell-content>span,
+.common-grid .grid-wrapper .normal-body .cell-content>span>span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 .066667rem;
+  @include font-dpr($grid-td-fontSize);
+}
