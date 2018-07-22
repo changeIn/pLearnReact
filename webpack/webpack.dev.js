@@ -35,7 +35,7 @@ config.devServer = {
     historyApiFallback: true,
     port: 3081,
     open: true,
-    openPage: 'views/pra/todo.html'
+    openPage: 'views/pra/p2.html'
 };
 
 module.exports = config;
