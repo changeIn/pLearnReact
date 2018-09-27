@@ -33,7 +33,7 @@ function ListTds(props) {
                         <td
                             key={item.index}
                             style={{
-                                display: item.hide ? 'none' : 'grid',
+                                display: item.hide ? 'none' : '',
                                 width: item.width ? item.width + '%' : 'auto'
                             }}
                         >
@@ -53,7 +53,7 @@ function ListTds(props) {
                             <td
                                 key={i}
                                 style={{
-                                    display: item.hide ? 'none' : 'grid',
+                                    display: item.hide ? 'none' : '',
                                     width: item.width ? item.width + '%' : 'auto'
                                 }}
                             >
